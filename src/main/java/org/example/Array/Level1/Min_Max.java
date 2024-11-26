@@ -1,4 +1,4 @@
-package org.example.Array;
+package org.example.Array.Level1;
 
 public class Min_Max {
     public static int min(int[] a)
