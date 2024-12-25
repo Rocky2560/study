@@ -19,7 +19,6 @@ public class linearsearch {
         else
         {
             System.out.println("Missing the number");
-
         }
 
     }
@@ -29,6 +28,5 @@ public class linearsearch {
         int x = 50;
         int n = a.length;
         search(a, n, x);
-
     }
 }
