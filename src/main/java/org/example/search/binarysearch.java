@@ -1,5 +1,7 @@
 package org.example.search;
 
+import java.util.Arrays;
+
 public class binarysearch {
 
 
@@ -42,5 +44,14 @@ public class binarysearch {
         else
             System.out.println("Element is present at "
                     + "index " + result);
+
+
+        int result2 = Arrays.binarySearch(arr, x);
+        if (result2 == -1)
+            System.out.println(
+                    "Element is not present in array");
+        else
+            System.out.println("Element is present at "
+                    + "index " + result2);
     }
 }
