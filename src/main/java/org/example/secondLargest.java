@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class secondLargest {
     public static void main(String[] args) {
-        int [] a ={1,2,3,4};
+        int [] a ={7,2,3,4};
         System.out.println(highest(a));
     }
     static int highest(int[] a)
