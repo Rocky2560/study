@@ -1,5 +1,7 @@
 package org.example.DSA;
 
+import java.util.List;
+
 public class singlelinkedlist {
     private ListNode head;
 
@@ -24,12 +26,13 @@ public class singlelinkedlist {
         singlelinkedlist.head.next = second;
         second.next = third;
         third.next = fourth;
+        fourth.next = second;
 
 //        singlelinkedlist.addLinkelist(66);
 //        singlelinkedlist.addLast(22);
 //        singlelinkedlist.insert(1,11);
 
-        singlelinkedlist.display();
+//        singlelinkedlist.display();
 
 //        System.out.println(singlelinkedlist.deleteFirst().data);
 //        System.out.println(singlelinkedlist.count());
@@ -40,13 +43,63 @@ public class singlelinkedlist {
 
 
 //        ListNode reverse = singlelinkedlist.reverse(second);
-        System.out.println(singlelinkedlist.getNthnodefromEnd(3).data);
-        singlelinkedlist.uniqueSortedList();
+//        System.out.println(singlelinkedlist.getNthnodefromEnd(3).data);
+//        singlelinkedlist.uniqueSortedList();
         ListNode fifth = new ListNode(3);
 //        System.out.println(singlelinkedlist.addElement(fifth));
         singlelinkedlist.deleteNode(8);
-        singlelinkedlist.display();
+        System.out.println(singlelinkedlist.loopDetect(fifth).data  );
+        System.out.println(singlelinkedlist.loopLinkedlist());
+//        singlelinkedlist.display();
     }
+
+//Floyyds cycle algorithm
+    public ListNode getStartingNode (ListNode slowPtr)
+    {
+        ListNode temp = head;
+        while (temp != slowPtr)
+        {
+            temp = temp.next;
+            slowPtr = slowPtr.next;
+        }
+        return temp;
+    }
+
+    //Detecting the satring of the loop in the linkedlist
+    public ListNode loopDetect(ListNode listNode)
+    {
+        ListNode fastPtr = head;
+        ListNode slowPtr = head;
+        while (fastPtr != null && fastPtr.next != null)
+        {
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+            if (slowPtr == fastPtr)
+            {
+                return getStartingNode(slowPtr);
+            }
+        }
+        return null;
+    }
+
+    //Checking the loop in the linedlist
+    public boolean loopLinkedlist()
+    {
+        ListNode fastptr = head;
+        ListNode slowvptr = head;
+        while (fastptr != null && fastptr.next != null)
+        {
+            fastptr = fastptr.next.next;
+            slowvptr = slowvptr.next;
+
+            if (fastptr == slowvptr)
+            {
+                return true;
+            }
+        }
+    return false;
+    }
+
 public void deleteNode(int key)
 {
     ListNode current = head;
