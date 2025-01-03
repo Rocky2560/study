@@ -48,9 +48,37 @@ public class singlelinkedlist {
         ListNode fifth = new ListNode(3);
 //        System.out.println(singlelinkedlist.addElement(fifth));
         singlelinkedlist.deleteNode(8);
-        System.out.println(singlelinkedlist.loopDetect(fifth).data  );
-        System.out.println(singlelinkedlist.loopLinkedlist());
-//        singlelinkedlist.display();
+        System.out.println(singlelinkedlist.loopDetect(fifth).data);
+        singlelinkedlist.loopBreak();
+
+    }
+
+    public void removeLoop (ListNode slowPtr)
+    {
+        ListNode temp = head;
+        while (slowPtr.next != temp.next)
+        {
+            temp = temp.next;
+            slowPtr = slowPtr.next;
+        }
+        slowPtr.next = null;
+
+    }
+    //Loop breaking
+    public void loopBreak ()
+    {
+        ListNode fastPtr = head;
+        ListNode slowPtr = head;
+        while (fastPtr!= null && fastPtr.next != null)
+        {
+            fastPtr = fastPtr.next.next;
+            slowPtr = slowPtr.next;
+            if (fastPtr == slowPtr)
+            {
+                removeLoop(slowPtr);
+                 return;
+            }
+        }
     }
 
 //Floyyds cycle algorithm
