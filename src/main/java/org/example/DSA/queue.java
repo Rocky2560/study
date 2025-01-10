@@ -1,6 +1,7 @@
 package org.example.DSA;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class queue {
 
@@ -58,11 +59,44 @@ public class queue {
         System.out.println("null");
     }
 
+    //Removing the element as dequeue
+    public void remove()
+    {
+        if (isEmpty())
+        {
+            throw new NoSuchElementException();
+        }
+        int result = front.data;
+        front = front.next;
+        if(front == null)
+        {
+            rear = null;
+        }
+        length--;
+        System.out.println(result);
+    }
+
+    public int first()
+    {
+        if (isEmpty())
+            throw new NoSuchElementException(("Queue is already empty"));
+        return front.data;
+    }
+
+    public int last()
+    {
+        if (isEmpty())
+            throw new NoSuchElementException(("Queue is already empty"));
+        return rear.data;
+    }
+
     public static void main(String[] args) {
         queue queueInsert = new queue();
         queueInsert.insertEnqueue(12);
         queueInsert.insertEnqueue(1112);
         queueInsert.insertEnqueue(122);
+        queueInsert.print();
+        queueInsert.remove();
         queueInsert.print();
 
     }
