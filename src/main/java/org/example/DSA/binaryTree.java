@@ -46,7 +46,7 @@ public class binaryTree {
             preOrder(root.right);
         }
 
-        //Stack impelemation to print the data
+        //Stack implementation to print the data
         public void preOrderStackImpl()
         {
             if (root == null)
