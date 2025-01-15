@@ -3,6 +3,8 @@ package org.example.DSA;
 import com.sun.source.tree.BinaryTree;
 
 import javax.swing.tree.TreeNode;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class binaryTree {
@@ -151,6 +153,30 @@ public class binaryTree {
             }
         }
 
+        //Level based
+        public void levelOrderPrinting()
+        {
+            if (root == null)
+            {
+                return;
+            }
+            Queue<TreeNode> queue = new LinkedList<>();
+            queue.offer(root);
+            while (!queue.isEmpty())
+            {
+                TreeNode temp = queue.poll();
+                System.out.println(temp.data + " ");
+                if (temp.left != null)
+                {
+                    queue.offer(temp.left);
+                }
+                if (temp.right != null)
+                {
+                    queue.offer(temp.right);
+                }
+            }
+        }
+
         public  static void main(String[] args) {
 
             binaryTree binaryTree = new binaryTree();
@@ -159,7 +185,8 @@ public class binaryTree {
 //            binaryTree.preOrderStackImpl();
 //            binaryTree.postOrder(binaryTree.root);
 //            binaryTree.inOrderStack();
-            binaryTree.preOrderStack(binaryTree.root);
+//            binaryTree.preOrderStack(binaryTree.root);
+            binaryTree.levelOrderPrinting();
 
 
         }
