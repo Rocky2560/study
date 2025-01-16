@@ -78,11 +78,31 @@ public class binarySearchTree {
 
     }
 
+
+    boolean isValid(TreeNode root, long min, long max)
+    {
+        if (root == null)
+            return true;
+
+        if (root.data <= min || root.data >= max)
+        {
+            return false;
+        }
+
+        boolean left = isValid(root.left, min, root.data);
+        if (left)
+        {
+            boolean right = isValid(root.rigth, root.data, max);
+            return right;
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         binarySearchTree binarySearchTree = new binarySearchTree();
 
+        binarySearchTree.insert(111);
         binarySearchTree.insert(1);
-        binarySearchTree.insert(2);
         binarySearchTree.insert(3);
         binarySearchTree.insert(122);
 //        binarySearchTree.inOrder();
@@ -94,5 +114,7 @@ public class binarySearchTree {
         {
             System.out.println("key is not found");
         }
+
+        System.out.println(binarySearchTree.isValid(binarySearchTree.root, Integer.MIN_VALUE, Integer.MAX_VALUE));
     }
 }
