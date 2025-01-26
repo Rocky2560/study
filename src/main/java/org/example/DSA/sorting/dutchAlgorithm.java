@@ -17,6 +17,15 @@ public class dutchAlgorithm {
             }
         }
     }
+
+    public static void print (int []  arr)
+    {
+        for (int x : arr)
+        {
+            System.out.println(x);
+        }
+    }
+
         public static void swap (int [] arr, int i, int k)
         {
             int temp = arr[i];
@@ -27,5 +36,6 @@ public class dutchAlgorithm {
     public static void main(String[] args) {
         int arr [] = {0,1,0,0,2,1,2,1};
         ducthNational(arr);
+        print(arr);
     }
 }
