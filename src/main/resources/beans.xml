@@ -12,4 +12,15 @@
         <constructor-arg name="age" value="29"></constructor-arg>
     </bean>
 
+    
+    <bean id="info" class="org.example.spring.IOC.setterInjection.infoBean">
+        <property name="name" value="Sudip"/>
+        <property name="title" value="Software Engineer"/>
+        <property name="map" >
+            <map>
+                <entry key="Testing" value="Testing is good"></entry>
+                <entry key="Talk" value="Communication di needed"></entry>
+            </map>
+        </property>
+    </bean>
 </beans>
