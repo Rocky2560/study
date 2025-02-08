@@ -1,4 +1,4 @@
-package org.example.spring.IOC.beanfactory;
+package org.example.spring.beanfactory;
 
 public class Student {
 

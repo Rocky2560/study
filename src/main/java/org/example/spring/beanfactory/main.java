@@ -1,4 +1,4 @@
-package org.example.spring.IOC.beanfactory;
+package org.example.spring.beanfactory;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

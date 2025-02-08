@@ -7,13 +7,13 @@
 <!--    <bean id="sim" class="org.example.spring.IOC.Ntc"></bean>-->
     <bean id="sim" class="org.example.spring.IOC.Ncell"></bean>
 
-    <bean id ="student" class="org.example.spring.IOC.beanfactory.Student">
+    <bean id ="student" class="org.example.spring.beanfactory.Student">
         <constructor-arg name="name" value="Alisha"></constructor-arg>
         <constructor-arg name="age" value="29"></constructor-arg>
     </bean>
 
     
-    <bean id="info" class="org.example.spring.IOC.setterInjection.infoBean">
+    <bean id="info" class="org.example.spring.setterInjection.infoBean">
         <property name="name" value="Sudip"/>
         <property name="title" value="Software Engineer"/>
         <property name="map" >

@@ -11,7 +11,7 @@ public class reverse_linkedlist {
 
         System.out.println(input);
 
-        System.out.println(input.reversed());
+//        System.out.println(input.reverse());
         LinkedList<Integer> output = new LinkedList<Integer>();
         input.descendingIterator().forEachRemaining(output::add);
         System.out.println(output);
