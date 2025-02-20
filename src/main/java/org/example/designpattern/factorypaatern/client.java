@@ -1,62 +1,19 @@
 package org.example.designpattern.factorypaatern;
 
-public  class client {
-    public abstract class vehicle {
+public class client {
+
+    public static void main(String[] args) {
+        vehicleFactory vehicleFactory = new carFactory();
+        vehicle vehicle = vehicleFactory.createVehicle();
+        vehicle.drive();
 
 
-        public abstract void printVehicle();
-    }
-    class TwoWheeler extends vehicle
-    {
-
-        @Override
-        public void printVehicle() {
-            System.out.println("two wheeler");
-        }
-    }
-
-    class FourWheeler extends vehicle
-    {
-        @Override
-        public void printVehicle()
-        {
-            System.out.println("Four wheeler");
-        }
-    }
-
-    interface VehicleFactory
-    {
-        vehicle createVehicle();
-    }
-
-    class TwoWheelFactory implements VehicleFactory
-    {
-        public vehicle createVehicle()
-        {
-            return new TwoWheeler();
-        }
-    }
-
-    class FourWheelFactory implements VehicleFactory
-    {
-        public vehicle createVehicle()
-        {
-            return new FourWheeler();
-        }
-    }
-
-//    class client
-//    {
-//        private vehicle pvehicle;
+//        bike.drive()
 //
-//        public client (VehicleFactory factory)
-//        {
-//            pvehicle = factory.createVehicle();
-//        }
-//
-//        public vehicle getVehicle()
-//        {
-//            return pvehicle;
-//        }
-//    }
+        vehicleFactory vehicleFactory1 = new bikeFactory();
+        vehicle vehicle1 = vehicleFactory1.createVehicle();
+        vehicle1.drive();
+
+
     }
+}
