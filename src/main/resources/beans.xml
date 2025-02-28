@@ -5,7 +5,7 @@
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 <!--    <bean id="sim" class="org.example.spring.IOC.Ntc"></bean>-->
-    <bean id="sim" class="org.example.spring.IOC.Ncell"></bean>
+    <bean id="sims" class="org.example.spring.IOC.Ncell"></bean>
 
     <bean id ="student" class="org.example.spring.beanfactory.Student">
         <constructor-arg name="name" value="Alisha"></constructor-arg>
