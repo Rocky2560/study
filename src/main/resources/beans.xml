@@ -7,11 +7,22 @@
 <!--    <bean id="sim" class="org.example.spring.IOC.Ntc"></bean>-->
     <bean id="sims" class="org.example.spring.IOC.Ncell"></bean>
 
+    <bean id="statusObject" class="org.example.DI.setter.xml.status"></bean>
+    <bean id="employee" class="org.example.DI.setter.xml.employee">
+        <property name="name" value="Sudip"></property>
+        <property name="status" ref="statusObject"></property>
+    </bean>
+
     <bean id ="student" class="org.example.spring.beanfactory.Student">
         <constructor-arg name="name" value="Alisha"></constructor-arg>
         <constructor-arg name="age" value="29"></constructor-arg>
     </bean>
 
+    <bean id="mathCheatObjectValue" class="org.example.DI.construction.math"></bean>
+    <bean id ="student1" class="org.example.DI.construction.student1">
+        <constructor-arg name="name" value="101"></constructor-arg>
+        <constructor-arg name="math" ref="mathCheatObjectValue"></constructor-arg>
+    </bean>
     
     <bean id="info" class="org.example.spring.setterInjection.infoBean">
         <property name="name" value="Sudip"/>
