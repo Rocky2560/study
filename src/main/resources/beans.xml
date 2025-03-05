@@ -18,6 +18,8 @@
         <constructor-arg name="age" value="29"></constructor-arg>
     </bean>
 
+    <bean id="hello" class="org.example.Bean.xml.helloworld" init-method="init" destroy-method="destroy"></bean>
+
     <bean id="mathCheatObjectValue" class="org.example.DI.construction.math"></bean>
     <bean id ="student1" class="org.example.DI.construction.student1">
         <constructor-arg name="name" value="101"></constructor-arg>
