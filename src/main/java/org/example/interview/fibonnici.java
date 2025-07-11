@@ -7,6 +7,7 @@ public class fibonnici {
         int a =0, b =1;
         int c = a + b;
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number : ");
         int in = sc.nextInt();
         for (int i=0; i<in; i++)
         {
@@ -15,6 +16,7 @@ public class fibonnici {
             b = c;
             c = a+b;
         }
+        sc.close();
 
     }
 }
