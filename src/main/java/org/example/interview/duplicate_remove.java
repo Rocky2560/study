@@ -15,6 +15,6 @@ public class duplicate_remove {
         {
             a[i++]=y;
         }
-        System.out.println("Arrays after removing duplciates"+Arrays.toString(a));
+        System.out.println("Arrays after removing duplicates"+Arrays.toString(a));
     }
 }
