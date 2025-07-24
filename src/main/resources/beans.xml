@@ -1,39 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--       https://www.springframework.org/schema/beans/spring-beans.xsd">-->
 
-<!--    <bean id="sim" class="org.example.spring.IOC.Ntc"></bean>-->
-    <bean id="sims" class="org.example.spring.IOC.Ncell"></bean>
+<!--&lt;!&ndash;    <bean id="sim" class="org.example.spring.IOC.Ntc"></bean>&ndash;&gt;-->
+<!--    <bean id="sims" class="org.example.spring.IOC.Ncell"></bean>-->
 
-    <bean id="statusObject" class="org.example.DI.setter.xml.status"></bean>
-    <bean id="employee" class="org.example.DI.setter.xml.employee">
-        <property name="name" value="Sudip"></property>
-        <property name="status" ref="statusObject"></property>
-    </bean>
+<!--    <bean id="statusObject" class="org.example.DI.setter.xml.status"></bean>-->
+<!--    <bean id="employee" class="org.example.DI.setter.xml.employee">-->
+<!--        <property name="name" value="Sudip"></property>-->
+<!--        <property name="status" ref="statusObject"></property>-->
+<!--    </bean>-->
 
-    <bean id ="student" class="org.example.spring.beanfactory.Student">
-        <constructor-arg name="name" value="Alisha"></constructor-arg>
-        <constructor-arg name="age" value="29"></constructor-arg>
-    </bean>
+<!--    <bean id ="student" class="org.example.spring.beanfactory.Student">-->
+<!--        <constructor-arg name="name" value="Alisha"></constructor-arg>-->
+<!--        <constructor-arg name="age" value="29"></constructor-arg>-->
+<!--    </bean>-->
 
-    <bean id="hello" class="org.example.Bean.xml.helloworld" init-method="init" destroy-method="destroy"></bean>
+<!--    <bean id="hello" class="org.example.Bean.xml.helloworld" init-method="init" destroy-method="destroy"></bean>-->
 
-    <bean id="mathCheatObjectValue" class="org.example.DI.construction.math"></bean>
-    <bean id ="student1" class="org.example.DI.construction.student1">
-        <constructor-arg name="name" value="101"></constructor-arg>
-        <constructor-arg name="math" ref="mathCheatObjectValue"></constructor-arg>
-    </bean>
-    
-    <bean id="info" class="org.example.spring.setterInjection.infoBean">
-        <property name="name" value="Sudip"/>
-        <property name="title" value="Software Engineer"/>
-        <property name="map" >
-            <map>
-                <entry key="Testing" value="Testing is good"></entry>
-                <entry key="Talk" value="Communication di needed"></entry>
-            </map>
-        </property>
-    </bean>
-</beans>
+<!--    <bean id="mathCheatObjectValue" class="org.example.DI.construction.math"></bean>-->
+<!--    <bean id ="student1" class="org.example.DI.construction.student1">-->
+<!--        <constructor-arg name="name" value="101"></constructor-arg>-->
+<!--        <constructor-arg name="math" ref="mathCheatObjectValue"></constructor-arg>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <bean id="info" class="org.example.spring.setterInjection.infoBean">-->
+<!--        <property name="name" value="Sudip"/>-->
+<!--        <property name="title" value="Software Engineer"/>-->
+<!--        <property name="map" >-->
+<!--            <map>-->
+<!--                <entry key="Testing" value="Testing is good"></entry>-->
+<!--                <entry key="Talk" value="Communication di needed"></entry>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--</beans>-->

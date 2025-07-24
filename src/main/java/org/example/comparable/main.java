@@ -1,8 +1,7 @@
 package org.example.comparable;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class main {
 
@@ -27,5 +26,13 @@ public class main {
         for (Person p : list) System.out.println(p);
 
 
+        List<Person> people = Arrays.asList(new Person("Alice", 20, 60),
+                new Person("Bob", 10, 10),
+        new Person("Ali", 30, 50));
+
+        List<Person> op = people.stream().sorted(Comparator.comparing(Person::getName)).collect(Collectors.toList());
+
+        System.out.println("Soreted by age using streams");
+        op.forEach(System.out::println);
     }
 }
