@@ -20,7 +20,6 @@ public class singleParam {
         List<Integer> list = Arrays.asList(1,2,3,4,5);
         List<Integer> list1 = Arrays.asList(1,7,8,9);
         list.forEach(n -> System.out.print(n + " "));
-
         zeroParameter.display();
 
 
