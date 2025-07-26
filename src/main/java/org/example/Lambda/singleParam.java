@@ -13,7 +13,6 @@ interface ZeroParameter
 
 public class singleParam {
 
-
     public static void main(String[] args) {
         ZeroParameter zeroParameter = () -> System.out.println("this is single paramter example");
 
@@ -22,6 +21,9 @@ public class singleParam {
         list.forEach(n -> System.out.print(n + " "));
         zeroParameter.display();
 
+
+        String x ="5";
+        System.out.println(x);
 
     }
 }
