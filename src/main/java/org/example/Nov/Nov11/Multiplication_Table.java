@@ -1,6 +1,4 @@
-package org.example.Nov11;
-
-import java.util.Arrays;
+package org.example.Nov.Nov11;
 
 public class Multiplication_Table {
 
