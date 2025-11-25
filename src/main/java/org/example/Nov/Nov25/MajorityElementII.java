@@ -36,12 +36,12 @@ public class MajorityElementII {
         if (cnt1 > n/3) arrayList.add(ele1);
         if (cnt2 > n/3 && ele1 != ele2) arrayList.add(ele2);
 
-        // Sort the result if needed
-//        if (arrayList.size() == 2 && arrayList.get(0) > arrayList.get(1)) {
-//            int temp = arrayList.get(0);
-//            arrayList.set(0, arrayList.get(1));
-//            arrayList.set(1, temp);
-//        }
+//         Sort the result if needed
+        if (arrayList.size() == 2 && arrayList.get(0) > arrayList.get(1)) {
+            int temp = arrayList.get(0);
+            arrayList.set(0, arrayList.get(1));
+            arrayList.set(1, temp);
+        }
 
         return arrayList;
     }
