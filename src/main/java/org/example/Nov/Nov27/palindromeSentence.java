@@ -25,7 +25,6 @@ public class palindromeSentence {
         System.out.println(isPalinSent(s)
                 ? "true" : "false");
     }
-
     private static boolean isPalinSent(String s) {
        int i=0, j=s.length()-1;
        while (i < j)
