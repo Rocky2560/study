@@ -15,7 +15,7 @@ public class Plus1 {
 
 
     public static void main(String[] args) {
-        int[] arr = {1, 9};
+        int[] arr = {1,2, 9};
         int[] res = addOne(arr);
         for(int i : res) {
             System.out.print(i);
