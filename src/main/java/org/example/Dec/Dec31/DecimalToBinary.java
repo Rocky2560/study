@@ -24,3 +24,16 @@ public class DecimalToBinary {
         else return (d%2 + 10 * decToBin(d/2));
     }
 }
+
+//Recursive Approach for Small Integers - O(log2n) Time and O(log2n) Space
+//The function recursively divides the decimal number by 2, appending the remainder as the next binary digit, constructing the binary representation from right to left.
+//
+//For example
+//
+//To convert 10 to binary
+//
+//10 % 2 = 0, continue with 10 / 2 = 5
+//5 % 2 = 1, continue with 5 / 2 = 2
+//2 % 2 = 0, continue with 2 / 2 = 1
+//1 % 2 = 1, stop as 1 / 2 = 0
+//Reading remainders gives 1010 (binary).
