@@ -24,3 +24,7 @@ public class Reverse_sTring_recursion {
     return reverse(str.substring(1))+ str.charAt(0);
     }
 }
+
+//Approach - 1] - Make a Recursive Call and Then Process the First Char
+//The idea for this approach is to make a recursive call for the substring starting
+// from the second character and then print the first character.
