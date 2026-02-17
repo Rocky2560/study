@@ -1,0 +1,55 @@
+package org.example.Feb.Feb17
+class TwoStacks {
+    constructor(n) {
+        this.size = n;
+        this.arr = new Array(n);
+        this.top1 = -1;
+        this.top2 = n;
+    }
+
+    push1(x) {
+        if (this.top1 < this.top2 - 1) {
+            this.top1++;
+            this.arr[this.top1] = x;
+        }
+    }
+
+    push2(x) {
+        if (this.top1 < this.top2 - 1) {
+            this.top2--;
+            this.arr[this.top2] = x;
+        }
+    }
+
+    pop1() {
+        if (this.top1 >= 0) {
+            const x = this.arr[this.top1];
+            this.top1--;
+            return x;
+        } else {
+            return -1;
+        }
+    }
+
+    pop2() {
+        if (this.top2 < this.size) {
+            const x = this.arr[this.top2];
+            this.top2++;
+            return x;
+        } else {
+            return -1;
+        }
+    }
+}
+
+const ts = new TwoStacks(5);
+ts.push1(2);
+ts.push1(3);
+ts.push2(4);
+
+let output = '';
+output += ts.pop1() + ' ';
+output += ts.pop2() + ' ';
+output += ts.pop2() + ' ';
+
+console.log(output.trim());
