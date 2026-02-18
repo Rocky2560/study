@@ -1,6 +1,7 @@
 package org.example.Feb.Feb17;
 
 import java.util.Stack;
+//https://www.geeksforgeeks.org/dsa/implement-two-stacks-in-an-array/
 
 class TwoStacks {
     private Stack<Integer> stack1;
