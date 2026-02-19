@@ -28,7 +28,6 @@ public class ReverseEachWord {
                 stringBuilder.append(" ");
             }
         }
-
         while (!stack.isEmpty())
         {
             stringBuilder.append(stack.pop());
